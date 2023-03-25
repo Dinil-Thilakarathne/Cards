@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+:root{
+  --primaryColor : #fff;
+  --Card1Color : #FF7377;
+  --Card2Color : #66FFE5;
+  --Card3Color : #56cbf9;
+}
+
+body{
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(200, 200, 200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins';
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container .box {
+  height: 50vh;
+  width: 40vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  position: relative;
+  z-index: 0;
+  box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+.container .box .icon{
+  height: 30%;
+  width: 100%;
+  position: relative;
+}
+.container .box .icon i{
+  font-size: 55px;
+  position: absolute;
+  left: 43%;
+  bottom: -100px;
+  opacity: 0.1;
+}
+.container .box .content{
+  height: 70%;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  pointer-events: none;
+}
+.container .box .content p{
+  text-align: justify;
+}
+.container .box .icon,.container .box .content{
+  z-index: 2;
+}
+/* animated box */
+.container .box .animated-box{
+  height: 0%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  border-radius: 20px;
+}
+.container .box:nth-child(1) .animated-box{
+  background-color: var(--Card1Color);
+}
+.container .box:nth-child(2) .animated-box{
+  background-color: var(--Card2Color);
+}
+.container .box:nth-child(3) .animated-box{
+  background-color: var(--Card3Color);
+}
+.container .box:hover .animated-box{
+  height: 100%;
+  transform: translateY(0);
+  transition: 0.8s ease;
+  z-index: 1;
+}
+/* icon hover effect */
+.container .box:hover .icon i{
+  opacity: 1;
+  bottom: 20px;
+  transition: 0.8s ease;
+}
