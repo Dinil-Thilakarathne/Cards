@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primaryColor : #d0d0d0;
+    --cardTopColor:#fff;
+    --iconColor :#fff;
+    --iconClickColor :rgb(255, 0, 123);
+    --contentTxtColor:#fff;
+    --shape1Color :#F27405;
+    --shape2Color :#F28E13;
+    --shape3Color :#F2B84B;
+    --shadowColor:#F2B84B;
+    --mainTranstion : 0.3s ease-in-out;
+}
+body{
+    font-family: "poppins";
+    background-color: var(--primaryColor);
+}
+
+.home-page{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+/* card  */
+.card{
+    height: 60vh;
+    width: 60vh;
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 10px var(--shadowColor);
+}
+.card:hover{
+    transform: scale(1.1);
+    transition: var(--mainTranstion);
+    cursor: daf;
+}
+/* card image  */
+.card .card-image{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    border-radius: 1rem;
+    opacity: 0.6;
+}
+.card-1 .card-image{
+    background-image: url("./img/nature-g48d62a332_1920.jpg");
+}
+
+.card:hover .card-image{
+    opacity: 1;
+    transition: var(--mainTranstion);
+}
+
+/* card top  */
+.card .card-top{
+    height: 10%;
+    width: 100%;
+    background-color: var(--cardTopColor);
+    position: absolute;
+    top: 0;
+    border-top-right-radius: 1rem;
+    display: none;
+}
+.card:hover .card-top{
+    display: block;
+    transition: var(--mainTranstion);
+}
+.card-top .card-top-shapes{
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.card-top .card-top-shapes div{
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+}
+
+.card-top .card-top-shapes div:nth-child(1){
+    background-color: var(--shape1Color);
+}
+.card-top .card-top-shapes div:nth-child(2){
+    background-color: var(--shape2Color);
+}
+.card-top .card-top-shapes div:nth-child(3){
+    background-color: var(--shape3Color);
+}
+
+.card-top .card-top-icons{
+    position: absolute;
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    /* color: var(--iconColor); */
+}
+.icon-click{
+    color: var(--iconClickColor);
+}
+/* card content  */
+.card .card-content{
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    color: var(--contentTxtColor);
+}
+
+.card-content .content-info{
+    display: none;
+}
+
+.card:hover .content-info{
+    display: block;
+    transition: var(--mainTranstion);
+}

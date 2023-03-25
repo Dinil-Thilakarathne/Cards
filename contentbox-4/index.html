@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <!-- font awesome cdn  -->
+    <script src="https://kit.fontawesome.com/46b7ceee20.js" crossorigin="anonymous"></script>
+
+    <!-- custom css  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="home-page">
+        <div class="card card-1">
+            <div class="card-image"></div>
+            <div class="card-top">
+                <div class="card-top-shapes">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="card-top-icons">
+                    <i class="fa-solid fa-heart" id="like-icon1" onclick="iconColor()"></i>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="content-header">
+                    <h1>Lorem, ipsum dolor.</h1>
+                </div>
+                <div class="content-info">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab repellat autem fugiat magnam culpa nisi natus numquam obcaecati totam delectus.</p>
+                </div>
+            </div>
+        </div>
+
+    <script>
+        var likeIcon1 = document.getElementById("like-icon1");
+
+        likeIcon1.onclick = function(){
+            if(likeIcon1.className=="fa-solid fa-heart"){
+                likeIcon1.className="fa-solid fa-heart icon-click";
+            }else{
+                likeIcon1.className="fa-solid fa-heart";
+            }
+        };
+    </script>
+</body>
+</html>
