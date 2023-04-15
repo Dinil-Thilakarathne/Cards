@@ -6,12 +6,13 @@
     --cardShadowColor:#f25ff2;
     --spanTxtColor:#FD1AFD;
     --btnHoverColor:#FD1AFD;
+    --btnTxtColor:#FD1AFD;
     --btnHoverTxtColor:#fff;
 
     /* texts  */
     --fs-card-header:32px;
     --fs-card-header-des:16px;
-    --fs-card-body-header-:18px;
+    --fs-card-body-header:18px;
     --fs-card-body-header-des:24px;
     --fs-card-btn:16px;
     --fw-card-btn:500;
@@ -44,7 +45,11 @@ body{
     justify-content: space-between;
     position: relative;
     border-radius: 20px;
-    box-shadow: 2px 5px 5px var(--cardShadowColor);
+    box-shadow: 3.4px 3.4px 2.7px rgba(253, 26, 253, 0.021),
+    8.7px 8.7px 6.9px rgba(253, 26, 253, 0.03),
+    17.7px 17.7px 14.2px rgba(253, 26, 253, 0.038),
+    36.5px 36.5px 29.2px rgba(253, 26, 253, 0.047),
+    100px 100px 80px rgba(253, 26, 253, 0.07);
     overflow: hidden;
 }
 
@@ -85,12 +90,33 @@ body{
     border-radius: 50%;
 }
 
+/* card header  */
+.card-header{
+    height: 10%;
+    width: 100%;
+    text-align: center;
+}
+.card-header .profile-name{
+    font-size: var(--fs-card-header);
+}
+.card-header .profile-description{
+    font-size: var(--fs-card-header-des);
+}
+
 /* card body  */
 .card-body{
     width: 100%;
     display: inline-flex;
     align-items: center;
     justify-content: space-around;
+}
+.card-body .like-section h3,
+.card-body .follow-section h3{
+    font-size: var(--fs-card-body-header);
+}
+.card-body .like-section h2,
+.card-body .follow-section h2{
+    font-size: var(--fs-card-body-header-des);
 }
 .card-body span{
     color: var(--secondaryColor);
@@ -115,11 +141,12 @@ body{
 .icon-group{
     height: 100%;
     width: 100% ;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: space-around;
     position: relative;
     cursor: pointer;
+    color: var(--btnTxtColor);
 }
 .icon{
     font-size: 1.5rem;
@@ -149,6 +176,70 @@ body{
     display: block;
 }
 
+
+@media screen and (max-width:678px) {
+    :root{
+        /* texts  */
+        --fs-card-header:24px;
+        --fs-card-header-des:12px;
+        --fs-card-body-header:12px;
+        --fs-card-body-header-des:24px;
+        --fs-card-btn:12px;
+        --fw-card-btn:500;
+    }
+    .card{
+        height: 600px;
+        width: 350px;
+    }
+    .card .card-bg{
+        width: 100%;
+    }
+    .card-img,
+    .card-header,
+    .card-body,
+    .card-btn{
+        padding: 10px;
+    }
+
+    .icon-group{
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width:375px) {
+    :root{
+        /* texts  */
+        --fs-card-header:24px;
+        --fs-card-header-des:12px;
+        --fs-card-body-header:12px;
+        --fs-card-body-header-des:24px;
+        --fs-card-btn:12px;
+        --fw-card-btn:500;
+    }
+    .card{
+        height: 600px;
+        width: 300px;
+    }
+    .card .card-bg{
+        width: 100%;
+    }
+    .card-img,
+    .card-header,
+    .card-body,
+    .card-btn{
+        padding: 10px;
+    }
+
+    .card-btn{
+        height: 30%;
+        flex-direction: column;
+    }
+    .icon-group{
+        padding: 0 20px;
+    }
+}
+
 @keyframes card-loader {
     0%{
         transform: translateY(-100%);
@@ -166,3 +257,4 @@ body{
         clip-path: circle(55% at 50% 0);
     }
 }
+
