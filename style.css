@@ -70,17 +70,17 @@ body{
     box-shadow: 5px 5px 10px var(--shadowColor);
 }
 .card-1 .card-image{
-    background-image: url(/projects-img/card-2.png);
+    background-image: url("projects-img/card-2.png");
     background-size: contain;
     background-repeat: no-repeat ;
 }
 .card-3 .card-image{
-    background-image: url(/projects-img/card-3.png);
+    background-image: url("projects-img/card-3.png");
     background-size: contain;
     background-repeat: no-repeat ;
 }
 .card-2 .card-image{
-    background-image: url(/projects-img/contentbox.png);
+    background-image: url("projects-img/contentbox.png");
     background-size: contain;
     background-repeat: no-repeat ;
 }
